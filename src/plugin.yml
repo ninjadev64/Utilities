@@ -1,0 +1,10 @@
+main: com.amansprojects.moonphase.utilities.Main
+name: Utilities
+depend: [Additions]
+version: 1.0
+author: ninjadev64 (IGN ninjagamer64)
+description: MoonPhase Games Utilities Plugin
+commands:
+  l:
+    description: "Return to the lobby / leave your current minigame."
+    usage: "/l"
