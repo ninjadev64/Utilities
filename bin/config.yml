@@ -1,6 +1,0 @@
-disable weather: true
-disable beacons: true
-instant void death: true
-instant lapis in enchanting table: true
-hidden console messages:
-  - "Any console message that contains this text will not be shown!"
