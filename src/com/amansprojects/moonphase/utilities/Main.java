@@ -9,12 +9,14 @@ public class Main extends JavaPlugin {
 	EnchantingTableListener enchantingTableListener = new EnchantingTableListener(this);
 	BeaconListener beaconListener = new BeaconListener(this);
 	ConsoleManager consoleManager = new ConsoleManager(this);
-	LobbyEventListener lobbyEventListener = new LobbyEventListener();
-	LobbyCommandListener lobbyCommandListener = new LobbyCommandListener(lobbyEventListener);
+	LobbyEventListener lobbyEventListener;
+	LobbyCommandListener lobbyCommandListener;
 	
 	@Override
 	public void onEnable() {
 		saveDefaultConfig();
+		lobbyEventListener = new LobbyEventListener();
+		lobbyCommandListener = new LobbyCommandListener(lobbyEventListener);
 		getServer().getPluginManager().registerEvents(weatherListener, this);
 		getServer().getPluginManager().registerEvents(voidListener, this);
 		getServer().getPluginManager().registerEvents(enchantingTableListener, this);

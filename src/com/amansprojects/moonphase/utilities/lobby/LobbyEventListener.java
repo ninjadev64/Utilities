@@ -4,6 +4,7 @@ import net.gcnt.additionsplus.AdditionsPlus;
 import net.gcnt.additionsplus.api.AdditionsAPI;
 import net.gcnt.additionsplus.files.books.Book;
 import net.gcnt.additionsplus.files.items.CustomItem;
+
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
