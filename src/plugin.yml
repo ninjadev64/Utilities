@@ -1,6 +1,6 @@
 main: com.amansprojects.moonphase.utilities.Main
 name: Utilities
-depend: [Additions]
+load: STARTUP
 version: 1.0
 author: ninjadev64 (IGN ninjagamer64)
 description: MoonPhase Games Utilities Plugin
