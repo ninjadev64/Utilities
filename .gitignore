@@ -3,5 +3,6 @@ bin/
 .settings/
 .classpath
 .gitattributes
+additionsplus-1.0.1.jar
 .project
 *.iml
