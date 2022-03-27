@@ -8,3 +8,13 @@ commands:
   l:
     description: "Return to the lobby / leave your current minigame."
     usage: "/l"
+  maintenance:
+    description: "Toggle maintenance mode."
+    permission: utilities.maintenance.toggle
+permissions:
+  utilities.maintenance.bypass:
+    description: "Bypass maintenance mode."
+    default: op
+  utilities.maintenance.toggle:
+    description: "Toggle maintenance mode."
+    default: op

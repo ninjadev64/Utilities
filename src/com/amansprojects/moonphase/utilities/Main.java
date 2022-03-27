@@ -10,6 +10,7 @@ public class Main extends JavaPlugin {
 	EnchantingTableListener enchantingTableListener = new EnchantingTableListener(this);
 	BeaconListener beaconListener = new BeaconListener(this);
 	ConsoleManager consoleManager = new ConsoleManager(this);
+	Maintenance maintenance = new Maintenance(this);
 	public LobbyEventListener lobbyEventListener;
 	public LobbyCommandListener lobbyCommandListener;
 	
@@ -21,6 +22,8 @@ public class Main extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(enchantingTableListener, this);
 		getServer().getPluginManager().registerEvents(beaconListener, this);
 		getServer().getPluginManager().registerEvents(new APEnableListener(this), this);
+		getServer().getPluginManager().registerEvents(maintenance, this);
+		getCommand("maintenance").setExecutor(maintenance);
 		getServer().getLogger().setFilter(consoleManager);
 		getLogger().info("MoonPhase Games: Utilities Plugin Enabled");
 	}
