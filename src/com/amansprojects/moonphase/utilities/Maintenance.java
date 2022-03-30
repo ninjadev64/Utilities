@@ -45,8 +45,7 @@ public class Maintenance implements Listener, CommandExecutor {
         } else return false;
         plugin.saveConfig();
         plugin.reloadConfig();
-        sender.sendMessage(ChatColor.GRAY + "[" + ChatColor.BOLD + "Admin" + ChatColor.RESET + ChatColor.GRAY + "] "
-                + ChatColor.GREEN + "Updated maintenance settings! Maintenance is now set to " + ChatColor.BOLD + plugin.getConfig().getBoolean("maintenance"));
+        sender.sendMessage("§7[§lAdmin§r§7] §aUpdated maintenance settings! Maintenance is now set to §l" + plugin.getConfig().getBoolean("maintenance"));
         return true;
     }
 }

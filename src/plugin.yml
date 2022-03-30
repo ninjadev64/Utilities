@@ -11,10 +11,15 @@ commands:
   maintenance:
     description: "Toggle maintenance mode."
     permission: utilities.maintenance.toggle
+  utilities:
+    description: "A parent command for Utilities subcommands."
 permissions:
   utilities.maintenance.bypass:
     description: "Bypass maintenance mode."
     default: op
   utilities.maintenance.toggle:
     description: "Toggle maintenance mode."
+    default: op
+  utilities.reload:
+    description: "Reload the Utilities configuration."
     default: op
