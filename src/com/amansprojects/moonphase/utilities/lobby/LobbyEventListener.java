@@ -1,9 +1,9 @@
 package com.amansprojects.moonphase.utilities.lobby;
 
+import net.gcnt.additionsplus.AdditionsPlus;
 import net.gcnt.additionsplus.api.AdditionsAPI;
-import net.gcnt.additionsplus.api.AdditionsPlugin;
-import net.gcnt.additionsplus.api.objects.AdditionsBook;
-import net.gcnt.additionsplus.api.objects.AdditionsItem;
+import net.gcnt.additionsplus.files.books.Book;
+import net.gcnt.additionsplus.files.items.CustomItem;
 
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
@@ -18,13 +18,13 @@ import org.bukkit.potion.PotionEffectType;
 
 public class LobbyEventListener implements Listener {
 
-    AdditionsAPI additionsAPI = ((AdditionsPlugin) Bukkit.getPluginManager().getPlugin("Additions")).getAPI();
+    AdditionsAPI additionsAPI = AdditionsPlus.getAPI();
 
 	public void sendPlayerToLobby(Player player) {
         player.getInventory().clear();
         player.getInventory().setArmorContents(null);
-        AdditionsBook helpBook = additionsAPI.getBookByName("Help");
-        AdditionsItem gameSelectorItem = additionsAPI.getItemByName("Games");
+        Book helpBook = additionsAPI.getBookByName("Help");
+        CustomItem gameSelectorItem = additionsAPI.getItemByName("Games");
         player.setGameMode(GameMode.ADVENTURE);
 		player.teleport(new Location(Bukkit.getWorld("Lobby"), 0, 7, 0));
         for (PotionEffect effect : player.getActivePotionEffects()) { player.removePotionEffect(effect.getType()); }
