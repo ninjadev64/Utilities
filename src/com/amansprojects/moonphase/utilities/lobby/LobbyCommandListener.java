@@ -14,7 +14,7 @@ public class LobbyCommandListener implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (sender instanceof Player) {
-            this.lobbyEventListener.sendPlayerToLobby((Player) sender);
+            this.lobbyEventListener.sendPlayerToLobby((Player) sender, true);
             return true;
         }
         return false;
