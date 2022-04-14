@@ -45,7 +45,7 @@ public class LobbyEventListener implements Listener {
 	
 	@EventHandler
 	public void onWorldChange(PlayerChangedWorldEvent event) {
-        if (event.getPlayer().getLocation().getWorld().toString().equalsIgnoreCase("Lobby")) {
+        if (event.getPlayer().getLocation().getWorld().getName().equalsIgnoreCase("Lobby")) {
         	Player player = event.getPlayer();
             sendPlayerToLobby(player);
         }
