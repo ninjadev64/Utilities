@@ -31,6 +31,8 @@ public class LobbyEventListener implements Listener {
         for (PotionEffect effect : player.getActivePotionEffects()) { player.removePotionEffect(effect.getType()); }
         player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 99999, 1));
         player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 99999, 1));
+        player.setLevel(0);
+        player.setExp(0);
         player.setHealth(20);
         helpBook.giveBook(player);
         gameSelectorItem.giveItem(player, true);
