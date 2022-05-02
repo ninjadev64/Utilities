@@ -27,7 +27,7 @@ public class LobbyEventListener implements Listener {
         AdditionsBook helpBook = additionsAPI.getBookByName("Help");
         AdditionsItem gameSelectorItem = additionsAPI.getItemByName("Games");
         player.setGameMode(GameMode.ADVENTURE);
-		if (teleport) player.teleport(new Location(Bukkit.getWorld("Lobby"), 0, 7, 0));
+		if (teleport) player.teleport(new Location(Bukkit.getWorld("Lobby"), 0.5, 7, 0.5));
         for (PotionEffect effect : player.getActivePotionEffects()) { player.removePotionEffect(effect.getType()); }
         player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 99999, 1));
         player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 99999, 1));
